@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Superslow</title>
+
+	<script src="/d3/d3.v3.min.js" charset="utf-8"></script>
+
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+	<link href="material/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+	
+	
+	 <script>
+	    dojoConfig= {
+	        has: {
+	            "dojo-firebug": true
+	        },
+	        parseOnLoad: false,
+	        async: true,
+	        locale:"en",
+	        packages: [{
+	        
+	        }]
+	    };
+	    
+	    var start = new Date().getTime();
+	</script>
+ 
+  	<script src="/dojo/dojo/dojo.js"></script> 
+
+	<script type="text/javascript">
+		// Load the widget parser and mobile base
+		require(["dojo/parser"],
+			function(parser) {
+			
+				var stop = new Date().getTime();
+				
+				var div = document.getElementById("myDiv")
+				div.innerHTML="Done! Took "+ (stop -start) + "ms";
+			
+			}
+		);
+	</script>
+
+
+</head>
+<body>
+
+<h1 id="myDiv">Loading....</h1>
+</body>
+</html>
